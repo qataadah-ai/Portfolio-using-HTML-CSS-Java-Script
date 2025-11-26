@@ -42,6 +42,10 @@ section{
     align-items: center;
     z-index: 100;
 }
+.header.sticky{
+border-bottom: .1rem solid var(--second-bg-color);
+
+}
 .logo{
     font-size: 2.5rem;
     font-weight: 600;
@@ -187,7 +191,7 @@ width: 100%;
 
 }
 .about-content {
-    padding: 0 1rem 1rem;
+    padding:  1rem 1rem;
 }
     
 .about-content h2{
@@ -211,7 +215,9 @@ width: 100%;
 
  /* Skills Styling */
 
-
+.skills{
+    overflow: hidden;
+}
  
 .skills-container {
       display: grid;
@@ -300,27 +306,172 @@ width: 100%;
     font-size: 1.2rem;
 }
 
+/* Project Section */
+.projects{
+    background-color: var(--second-bg-color);
+     overflow: hidden;
+}
+.projects h2{
+    margin-bottom: 4rem;
+}
+.project-container{
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    
+}
+  .project-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    
+  }
+  .project-box img{
+    width: 100%;
+    object-fit: contain;
+    transition: .3s ease;
+  }
+  
+ .project-box:hover img{
+    transform: scale(1.05);
+ }
 
 
+ .project-box .project-layer{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+background: linear-gradient(rgba(0, 0, 0, .1), rgb(44, 45, 45));
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+   padding: 1 4rem;
+transform: translatex(-100%);
+transition: .5s ease;
+  }
 
 
+  .project-box:hover .project-layer{
+    transform: translatex(0);
+    transition: .5s ease;
+ }
+    .project-layer h4{
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+.project-layer p{
+    font-size: 1.5rem;
+    margin: .4rem 0 2rem;
+   
+}
+.project-layer a{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width:5rem;
+   height: 5rem;
+   background: var(--text-color);
+    border-radius: 50%;
+}
+
+.project-layer a i{
+    font-size: 2rem;
+    color: black;
+ 
+}
 
 
+/* Contact-Section */
+.contact {
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+}
 
 
+.contact form {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-row input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: #2a2a3e;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 180px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Footer Section */
+
+.footer{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-iconTop{
+    padding: 4px;
+}
+.footer-iconTop i{
+font-size: 2.5rem;
+color: var(--bg-color)
+}
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    transition: .3s ease;
+    border:1px solid var(--main-color);
 
 
-
-
-
-
-
-
-
-
-
-
-
+}
+.footer-iconTop a:hover{
+    background-color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+   
+}
+.footer-iconTop i:hover{
+    color: var(--main-color);
+}
 /* Responsivness */
 @media(max-width:800px){
 html {
@@ -432,7 +583,6 @@ display: grid;
     gap: 3rem;
     }
 }
-
 @media(max-width:460px){
     .skills-container{
 display: grid;
@@ -447,5 +597,43 @@ display: grid;
     border-radius: 1rem;
 }
 
+
+}
+/* Project Section */
+@media(max-width:830px){
+    .project-container{
+display: grid;
+    grid-template-columns: repeat(2, 1fr); /* exactly 3 columns per row */
+    gap: 3rem;
+    }
+
+}
+@media(max-width:660px){
+    .project-container{
+display: grid;
+    grid-template-columns: repeat(1, 1fr); /* exactly 3 columns per row */
+    gap: 3rem;
+    }
 }
 
+/* Contact Section */
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  textarea {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact form {
+    padding: 0 1rem;
+  }
+
+  textarea {
+    height: 130px;
+  }
+}
