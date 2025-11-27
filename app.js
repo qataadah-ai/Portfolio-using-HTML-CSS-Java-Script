@@ -1,6 +1,4 @@
 
-
-
 let menuIcon = document.getElementById('menu-icon');
 let closeIcon = document.getElementById('close-icon');
 let navbar = document.querySelector('.navbar');
@@ -53,7 +51,7 @@ navLinks.forEach(link => {
 })  ;
 
  ScrollReveal({ 
-    // reset: true ,
+    
     distance:'80px',
     duration:'2000',
     delay:'200'

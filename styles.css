@@ -630,7 +630,7 @@ display: grid;
 
 @media (max-width: 480px) {
   .contact form {
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   textarea {
