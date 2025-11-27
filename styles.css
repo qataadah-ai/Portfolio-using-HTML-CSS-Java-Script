@@ -472,6 +472,7 @@ color: var(--bg-color)
 .footer-iconTop i:hover{
     color: var(--main-color);
 }
+
 /* Responsivness */
 @media(max-width:800px){
 html {
@@ -542,7 +543,7 @@ section {
   .home-content {
     max-width: 100%;
     padding:  0 1rem 1rem;
-;
+
   }
 
   .home-content p {
